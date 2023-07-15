@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "lib": ["ES2015"],
+    "strictNullChecks": true,
+    "noUncheckedIndexedAccess": true,
+    "rootDirs": ["."],
+    "declaration": true
+  },
+  "include": ["."],
+  "exclude": ["node_modules/**"]
+}

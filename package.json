@@ -1,15 +1,34 @@
 {
   "name": "typetype",
   "version": "1.0.0",
-  "description": "",
+  "description": "TypeScript type-level data structures",
   "main": "index.js",
+  "types": "./index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx tsc",
+    "test": "npx tsc --noEmit"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thoughtspile/typetype.git"
+  },
+  "keywords": [
+    "typescript",
+    "type-only",
+    "data-structures"
+  ],
+  "bugs": {
+    "url": "https://github.com/thoughtspile/typetype/issues"
+  },
+  "homepage": "https://github.com/thoughtspile/typetype#readme",
+  "license": "MIT",
   "devDependencies": {
-    "expect-type": "^0.16.0"
+    "expect-type": "^0.16.0",
+    "nano-staged": "^0.8.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.1.6"
+  },
+  "nano-staged": {
+    "*": "prettier --loglevel silent --write"
   }
 }

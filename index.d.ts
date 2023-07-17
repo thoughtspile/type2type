@@ -109,19 +109,19 @@ export namespace TMap {
       : remove<Tail, Key>
     : Q;
 
-  export type keys<M extends AnyTMap> = { [T in keyof M]: M[T][0] }[number];
-  export type values<M extends AnyTMap> = { [T in keyof M]: M[T][1] }[number];
+  export type keys<M extends AnyTMap> = { [T in keyof M]: M[T][0] };
+  export type values<M extends AnyTMap> = { [T in keyof M]: M[T][1] };
 
   export type size<Q extends AnyTMap> = Q["length"];
-  export type isEmpty<Q extends AnyTMap> = Equals<size<Q>, 0>;
+  export type empty<Q extends AnyTMap> = Equals<size<Q>, 0>;
 
   export type select<
     M extends AnyTMap,
     Key = unknown,
     Value = unknown,
-  > = M extends [infer Head, ...infer Tail extends TMap]
+  > = M extends [infer Head, ...infer Tail extends AnyTMap]
     ? Head extends [Key, Value]
       ? [Head, ...select<Tail, Key, Value>]
-      : select<Tail, Key>
-    : M;
+      : select<Tail, Key, Value>
+    : [];
 }

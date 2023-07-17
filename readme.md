@@ -1,6 +1,6 @@
-## TypeType
+## type2type
 
-Four classic data structures implemented in TypeScript type system: Stack, Queue, Set, and Map. No JS, only types. Finally, you can `TStack<number, number>` or `TMap<[[string, 'string']]>`  Good (type-only) unit test coverage. Why?
+Four classic data structures implemented in TypeScript type system: Stack, Queue, Set, and Map. No JS, only types. Finally, you can `TStack.push<stack, number>` or `TMap<[[string, 'string']]>`  Good (type-only) unit test coverage. Why?
 
 - Fun.
 - Explore type-only APIs and limitations of TS.
@@ -9,15 +9,15 @@ Four classic data structures implemented in TypeScript type system: Stack, Queue
 ## Installation
 
 ```sh
-npm i typetype
+npm i type2type
 ```
 
 ## Usage
 
-Here's how you can implement static [parentheses validation](https://leetcode.com/problems/valid-parentheses/) in TS type system uning `typetype`:
+Here's how you can implement static [parentheses validation](https://leetcode.com/problems/valid-parentheses/) in TS type system uning `type2type`:
 
 ```ts
-import { TMap, TStack } from "typetype";
+import { TMap, TStack } from "type2type";
 
 // declare valid open / closing parentheses pairs
 type Brackets = TMap<[
@@ -75,15 +75,13 @@ const err2 = calculate('2 * (1 + [5 + 1))');
   // ^? never
 ```
 
-Play with it yourself in [codesandbox.]()
-
 ## API
 
 General principles:
 
 ```ts
 // All types are named TType to avoid confusion with JS builtin
-import { TStack, TQueue, TSet, TMap } from 'typetype'
+import { TStack, TQueue, TSet, TMap } from 'type2type'
 
 // Types create an empty collection when called with no parameters
 type EmptyStack = TStack

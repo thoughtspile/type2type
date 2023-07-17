@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thoughtspile/typetype.git"
+    "url": "git+https://github.com/thoughtspile/type2type.git"
   },
   "keywords": [
     "typescript",
@@ -18,9 +18,9 @@
     "data-structures"
   ],
   "bugs": {
-    "url": "https://github.com/thoughtspile/typetype/issues"
+    "url": "https://github.com/thoughtspile/type2type/issues"
   },
-  "homepage": "https://github.com/thoughtspile/typetype#readme",
+  "homepage": "https://github.com/thoughtspile/type2type#readme",
   "license": "MIT",
   "devDependencies": {
     "expect-type": "^0.16.0",
